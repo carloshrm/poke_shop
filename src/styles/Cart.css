@@ -1,0 +1,10 @@
+#shopping_cart_div {
+    position: absolute;
+    right: 0;
+    background-color: cornflowerblue;
+    padding: 2rem;
+}
+
+ul {
+    list-style: none;
+}

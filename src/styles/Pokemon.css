@@ -1,0 +1,10 @@
+#main_pokemon_div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: brown;
+    width: 50%;
+    height: min-content;
+}

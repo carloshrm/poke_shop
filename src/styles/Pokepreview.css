@@ -1,0 +1,5 @@
+.poke_preview_div {
+    display: flex;
+    width: fit-content;
+    background-color: azure;
+}
