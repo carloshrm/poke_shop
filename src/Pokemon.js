@@ -2,9 +2,7 @@ import React, { useEffect } from "react";
 import "./styles/Pokemon.css";
 
 function Pokemon({ info, toggle, cartSetter }) {
-    useEffect(() => {
-        //console.log(info);
-    });
+    useEffect(() => {});
 
     function toggleDisplay() {
         toggle((prev) => ({ ...prev, display: !prev.display }));

@@ -52,32 +52,35 @@ function Catalog({ mainCatalog, cartSetter }) {
                     defaultValue={filterQuery}
                 />
             </form>
+
+            {viewDetails.display ? (
+                <Pokemon
+                    info={localCat[viewDetails.selectionID]}
+                    toggle={detailsToggle}
+                    cartSetter={cartSetter}
+                />
+            ) : (
+                <></>
+            )}
+
             <div id="catalog_container">
-                {viewDetails.display ? (
-                    <Pokemon
-                        info={localCat[viewDetails.selectionID]}
-                        toggle={detailsToggle}
-                        cartSetter={cartSetter}
-                    />
-                ) : (
-                    localCat.map((entry, i) => {
-                        if (entry.name.includes(filterQuery) || filterQuery === "")
-                            return (
-                                <div
-                                    className="poke_preview_div"
-                                    key={i}
-                                    onClick={() =>
-                                        detailsToggle({
-                                            display: !viewDetails.display,
-                                            selectionID: i,
-                                        })
-                                    }
-                                >
-                                    <Pokepreview info={entry} />
-                                </div>
-                            );
-                    })
-                )}
+                {localCat.map((entry, i) => {
+                    if (entry.name.includes(filterQuery) || filterQuery === "")
+                        return (
+                            <div
+                                className="poke_preview_div"
+                                key={i}
+                                onClick={() =>
+                                    detailsToggle({
+                                        display: !viewDetails.display,
+                                        selectionID: i,
+                                    })
+                                }
+                            >
+                                <Pokepreview info={entry} />
+                            </div>
+                        );
+                })}
             </div>
             <CatalogNav page={pageNumber} max={maxPages} flip={setPageNumber} />
         </>
