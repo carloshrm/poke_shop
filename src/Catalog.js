@@ -17,28 +17,27 @@ function Catalog({ mainCatalog, cartSetter }) {
 
     useEffect(() => {
         setLocalCat([]);
-        let selection = mainCatalog.slice(
+        let catalogSelection = mainCatalog.slice(
             pageNumber * perPageAmmount - perPageAmmount,
             pageNumber * perPageAmmount
         );
-        fetchForLocalCatalog(selection);
+        fetchForLocalCatalog(catalogSelection);
     }, [mainCatalog, pageNumber]);
 
     async function fetchForLocalCatalog(selection) {
         for (const poke in selection) {
-            let results = await fetchPokemon(selection[poke]);
-            if (results.hit) await new Promise((resolve) => setTimeout(resolve, 250));
-            setLocalCat((state) => [...state, results.info]);
+            let apiResults = await fetchPokemon(selection[poke]);
+            if (apiResults.hit) await new Promise((resolve) => setTimeout(resolve, 250));
+            setLocalCat((state) => [...state, apiResults.info]);
         }
     }
 
     function searchPokemon(e) {
         e.preventDefault();
-
-        let newOne = mainCatalog.filter((item) => {
+        let filteredCatalog = mainCatalog.filter((item) => {
             return item.name.includes(filterQuery);
         });
-        fetchForLocalCatalog(newOne);
+        fetchForLocalCatalog(filteredCatalog);
     }
 
     return (
@@ -53,17 +52,16 @@ function Catalog({ mainCatalog, cartSetter }) {
                 />
             </form>
 
-            {viewDetails.display ? (
-                <Pokemon
-                    info={localCat[viewDetails.selectionID]}
-                    toggle={detailsToggle}
-                    cartSetter={cartSetter}
-                />
-            ) : (
-                <></>
-            )}
-
             <div id="catalog_container">
+                {viewDetails.display ? (
+                    <Pokemon
+                        info={localCat[viewDetails.selectionID]}
+                        toggle={detailsToggle}
+                        cartSetter={cartSetter}
+                    />
+                ) : (
+                    <></>
+                )}
                 {localCat.map((entry, i) => {
                     if (entry.name.includes(filterQuery) || filterQuery === "")
                         return (
