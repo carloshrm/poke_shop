@@ -6,10 +6,6 @@ function Pokemon({ info, toggle, cartSetter }) {
     function toggleDisplay() {
         toggle((prev) => ({ ...prev, display: !prev.display }));
     }
-    useEffect(() => {
-        console.log(info);
-    });
-
     return (
         <div id="pokemon_details_container">
             <h1>{info.name[0].toUpperCase() + info.name.substring(1) + "."}</h1>
@@ -29,8 +25,8 @@ function Pokemon({ info, toggle, cartSetter }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {info.stats.map((unit) => (
-                            <tr>
+                        {info.stats.map((unit, i) => (
+                            <tr key={"row" + i}>
                                 <td>{unit.stat.name}</td>
                                 <td>{unit.base_stat}</td>
                             </tr>

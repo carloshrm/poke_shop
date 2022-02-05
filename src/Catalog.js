@@ -40,6 +40,11 @@ function Catalog({ mainCatalog, cartSetter }) {
         fetchForLocalCatalog(filteredCatalog);
     }
 
+    function dismissDetails(e) {
+        if (e.target.offsetParent.id.includes("pokemon")) return;
+        detailsToggle({ ...viewDetails, display: !viewDetails.display });
+    }
+
     return (
         <>
             <h1>catalog page{pageNumber}</h1>
@@ -52,7 +57,7 @@ function Catalog({ mainCatalog, cartSetter }) {
                 />
             </form>
 
-            <div id="catalog_container">
+            <div id="catalog_container" onClick={(e) => dismissDetails(e)}>
                 {viewDetails.display ? (
                     <Pokemon
                         info={localCat[viewDetails.selectionID]}
