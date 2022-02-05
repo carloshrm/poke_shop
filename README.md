@@ -2,4 +2,5 @@
 
 Why catch when you can just buy 'em all!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Info fetched from https://pokeapi.co
+Pokemon and all Pokemon related content are Nintendo trademarks.
