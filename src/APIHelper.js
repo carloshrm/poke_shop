@@ -38,13 +38,28 @@ async function fetchPokemon(pokemon) {
     if (details[pokemon.name].unset) {
         console.warn("= Api Call =");
         const pokeBall = await fetch(pokemon.url);
-        const shakeShake = await pokeBall.json();
-        details[pokemon.name] = { ...shakeShake, unset: false };
+        const caughtPokemon = await pokeBall.json();
+        details[pokemon.name] = { ...selectPokemonData(caughtPokemon), unset: false };
         localStorage.setItem("pokeDetails", JSON.stringify(details));
-        return { info: details[pokemon.name], hit: true };
+        return { info: details[pokemon.name] };
     } else {
-        return { info: details[pokemon.name], hit: false };
+        return { info: details[pokemon.name] };
     }
+}
+
+function selectPokemonData(allPokemonData) {
+    const detailFilter = [
+        "base_experience",
+        "height",
+        "id",
+        "name",
+        "stats",
+        "types",
+        "weight",
+        "sprites",
+    ];
+    let parsedData = Object.fromEntries(detailFilter.map((key) => [key, allPokemonData[key]]));
+    return parsedData;
 }
 
 export { mainCatalogCache, fetchPokemon };

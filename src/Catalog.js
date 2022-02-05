@@ -12,7 +12,7 @@ function Catalog({ mainCatalog, cartSetter }) {
     const [viewDetails, detailsToggle] = useState({ display: false, selectionID: 0 });
     const [filterQuery, setFilterQuery] = useState("");
 
-    const perPageAmmount = 10;
+    const perPageAmmount = 3;
     let maxPages = Math.round(1 + mainCatalog.length / perPageAmmount);
 
     useEffect(() => {
