@@ -41,7 +41,7 @@ function Catalog({ mainCatalog, cartSetter }) {
     }
 
     function dismissDetails(e) {
-        if (e.target.offsetParent.id.includes("pokemon")) return;
+        if (e.target.offsetParent.id.includes("pokemon") || viewDetails.display === false) return;
         detailsToggle({ ...viewDetails, display: !viewDetails.display });
     }
 
@@ -57,7 +57,7 @@ function Catalog({ mainCatalog, cartSetter }) {
                 />
             </form>
 
-            <div id="catalog_container" onClick={(e) => dismissDetails(e)}>
+            <div id="catalog_container" onClick={dismissDetails}>
                 {viewDetails.display ? (
                     <Pokemon
                         info={localCat[viewDetails.selectionID]}
@@ -73,12 +73,13 @@ function Catalog({ mainCatalog, cartSetter }) {
                             <div
                                 className="poke_preview_div"
                                 key={i}
-                                onClick={() =>
+                                onClick={(e) => {
+                                    e.stopPropagation();
                                     detailsToggle({
                                         display: !viewDetails.display,
                                         selectionID: i,
-                                    })
-                                }
+                                    });
+                                }}
                             >
                                 <Pokepreview info={entry} />
                             </div>

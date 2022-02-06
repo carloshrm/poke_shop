@@ -15,7 +15,7 @@ function Cart({ cartItems, cartSetter }) {
 
     return (
         <div id="shopping_cart_div">
-            <h3>shopping cart</h3>
+            <h3>Your Cart: </h3>
             <ul>
                 {cartItems.map((item, i) => (
                     <div key={item.id}>
