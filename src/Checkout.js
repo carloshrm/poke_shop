@@ -1,35 +1,22 @@
 import React, { useEffect, useState } from "react";
-import "./styles/Cart.css";
+import PokePreview from "./Pokepreview";
 
-function Cart({ cartItems, cartSetter, balance }) {
-    const [totalPrice, setTotalPrice] = useState(0);
+function Checkout({ cartItems, cartSetter, balance }) {
+    // show cart items, price per item, quantity, total
+    // balance math and error checking
+    // figure out where to put finished order
     function removeFromCart(id) {
         let filteredCart = cartItems.filter((po) => po.id !== id);
         cartSetter(filteredCart);
     }
 
-    function changeQuantity(e, index) {
-        let newCart = cartItems;
-        cartItems[index].quantity = parseInt(e.target.value);
-        cartSetter([...newCart]);
-    }
-
-    useEffect(() => {
-        let calculatedTotal = 0;
-        cartItems.forEach((poke) => {
-            calculatedTotal += poke.info.base_experience * poke.quantity;
-        });
-        setTotalPrice(calculatedTotal);
-    });
-
     return (
-        <div id="shopping_cart_div">
-            <h3>User balance: {balance}</h3>
-            <h3>Your Cart: </h3>
+        <div>
+            <h2>Checkout</h2>
             <ul>
                 {cartItems.map((item, i) => (
                     <li key={item.id}>
-                        <p>{item.info.name}</p>
+                        <PokePreview info={item} />
                         <label htmlFor="amount">Amount: </label>
                         <input
                             name="amount"
@@ -39,13 +26,17 @@ function Cart({ cartItems, cartSetter, balance }) {
                             value={item.quantity}
                             onChange={(e) => changeQuantity(e, i)}
                         />
+                        <p>Price: {item.info.base_experience}</p>
                         <button onClick={() => removeFromCart(item.id)}>Remove</button>
                         <p>Subtotal: {item.info.base_experience * item.quantity}</p>
                     </li>
                 ))}
             </ul>
-            <p>Total Price: {totalPrice}</p>
+            <p>Total Cost: {totalPrice}</p>
+            <p>Current Balance: {balance}</p>
+            <button>Checkout</button>
         </div>
     );
 }
-export default Cart;
+
+export default Checkout;

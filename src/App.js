@@ -14,6 +14,11 @@ import "./styles/Home.css";
 function App() {
     const [catalogData, setCatalogData] = useState([]);
     const [shoppingCart, setShoppingCart] = useState([]);
+    const [userBalance, setBalance] = useState(800);
+    // implement user balance, a checkout page, cart math
+    // show user data on navbar, implement showing/hiding cart tab
+    // test if localstorage capacity still blows up
+    // go into CSS styling hell
 
     useEffect(() => {
         (async () => {
@@ -47,7 +52,7 @@ function App() {
         <Router>
             <div className="Home">
                 <Navbar />
-                <Cart cartItems={shoppingCart} cartSetter={setShoppingCart} />
+                <Cart cartItems={shoppingCart} cartSetter={setShoppingCart} balance={userBalance} />
                 <Switch>
                     <Route exact path="/">
                         <Home />
