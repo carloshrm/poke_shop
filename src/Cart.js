@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./styles/Cart.css";
 
-function Cart({ cartItems, cartSetter, balance }) {
-    const [totalPrice, setTotalPrice] = useState(0);
+function Cart({ cartItems, cartSetter, balance, totalPrice }) {
     function removeFromCart(id) {
         let filteredCart = cartItems.filter((po) => po.id !== id);
         cartSetter(filteredCart);
     }
-
     function changeQuantity(e, index) {
         let newCart = cartItems;
         cartItems[index].quantity = parseInt(e.target.value);
         cartSetter([...newCart]);
     }
-
-    useEffect(() => {
-        let calculatedTotal = 0;
-        cartItems.forEach((poke) => {
-            calculatedTotal += poke.info.base_experience * poke.quantity;
-        });
-        setTotalPrice(calculatedTotal);
-    });
 
     return (
         <div id="shopping_cart_div">
@@ -45,6 +36,7 @@ function Cart({ cartItems, cartSetter, balance }) {
                 ))}
             </ul>
             <p>Total Price: {totalPrice}</p>
+            <Link to="/checkout">Checkout</Link>
         </div>
     );
 }

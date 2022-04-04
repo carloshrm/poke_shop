@@ -10,15 +10,19 @@ import Cart from "./Cart";
 import { mainCatalogCache } from "./APIHelper";
 // CSS styles
 import "./styles/Home.css";
+import Checkout from "./Checkout";
 
 function App() {
     const [catalogData, setCatalogData] = useState([]);
     const [shoppingCart, setShoppingCart] = useState([]);
     const [userBalance, setBalance] = useState(800);
-    // implement user balance, a checkout page, cart math
+    const [totalPrice, setTotalPrice] = useState(0);
+    // implement user balance, cart math - OK
+    // test localstorage - seems OK
+
+    // implement checkout page and logic
     // show user data on navbar, implement showing/hiding cart tab
-    // test if localstorage capacity still blows up
-    // go into CSS styling hell
+    // start CSS styling
 
     useEffect(() => {
         (async () => {
@@ -33,6 +37,11 @@ function App() {
 
     useEffect(() => {
         localStorage.setItem("pokeCart", JSON.stringify(shoppingCart));
+        let calculatedTotal = 0;
+        shoppingCart.forEach((poke) => {
+            calculatedTotal += poke.info.base_experience * poke.quantity;
+        });
+        setTotalPrice(calculatedTotal);
     }, [shoppingCart]);
 
     function addToCart(pokemonInfo) {
@@ -52,7 +61,12 @@ function App() {
         <Router>
             <div className="Home">
                 <Navbar />
-                <Cart cartItems={shoppingCart} cartSetter={setShoppingCart} balance={userBalance} />
+                <Cart
+                    cartItems={shoppingCart}
+                    cartSetter={setShoppingCart}
+                    balance={userBalance}
+                    totalPrice={totalPrice}
+                />
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -62,6 +76,14 @@ function App() {
                     </Route>
                     <Route exact path="/catalog">
                         <Catalog mainCatalog={catalogData} cartSetter={addToCart} />
+                    </Route>
+                    <Route exact path="/checkout">
+                        <Checkout
+                            cartItems={shoppingCart}
+                            cartSetter={setShoppingCart}
+                            balance={userBalance}
+                            totalPrice={totalPrice}
+                        />
                     </Route>
                 </Switch>
             </div>
