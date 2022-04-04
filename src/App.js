@@ -3,24 +3,22 @@ import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 // Local Modules
 import About from "./About";
-import Catalog from "./Catalog";
-import Navbar from "./Navbar";
-import Home from "./Home";
 import Cart from "./Cart";
+import Catalog from "./Catalog";
+import Checkout from "./Checkout";
+import Home from "./Home";
+import Navbar from "./Navbar";
 import { mainCatalogCache } from "./APIHelper";
 // CSS styles
 import "./styles/Home.css";
-import Checkout from "./Checkout";
 
 function App() {
     const [catalogData, setCatalogData] = useState([]);
+    const [cartVisibility, showCart] = useState(false);
     const [shoppingCart, setShoppingCart] = useState([]);
-    const [userBalance, setBalance] = useState(800);
     const [totalPrice, setTotalPrice] = useState(0);
-    // implement user balance, cart math - OK
-    // test localstorage - seems OK
+    const [userBalance, setBalance] = useState(800);
 
-    // implement checkout page and logic
     // show user data on navbar, implement showing/hiding cart tab
     // start CSS styling
 

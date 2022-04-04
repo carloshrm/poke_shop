@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./styles/Checkout.css";
 
 function Checkout({ cartItems, cartSetter, balance, totalPrice }) {
     //todo - make changes in styling and disable confirm if total > balance.
@@ -16,7 +17,7 @@ function Checkout({ cartItems, cartSetter, balance, totalPrice }) {
         <div>
             <h2>Checkout</h2>
             {cartItems.map((item, i) => (
-                <div key={item.id}>
+                <div class="checkout_item_div" key={item.id}>
                     <img src={item.info.sprites.other["official-artwork"].front_default} alt="" />
                     <table>
                         <tr>

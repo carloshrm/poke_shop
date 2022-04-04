@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/Cart.css";
 
-function Cart({ cartItems, cartSetter, balance, totalPrice }) {
+function Cart({ cartItems, cartSetter, balance, totalPrice, visibility }) {
     function removeFromCart(id) {
         let filteredCart = cartItems.filter((po) => po.id !== id);
         cartSetter(filteredCart);
