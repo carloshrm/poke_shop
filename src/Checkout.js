@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import CartContext from "./CartContext";
 import "./styles/Checkout.css";
 
-function Checkout({ cartItems, cartSetter, balance, totalPrice }) {
+function Checkout({ balance }) {
+    const { cartItems, setCart, totalPrice, removeFromCart, changeQuantity } =
+        useContext(CartContext);
+
     //todo - make changes in styling and disable confirm if total > balance.
-    function removeFromCart(id) {
-        let filteredCart = cartItems.filter((po) => po.id !== id);
-        cartSetter(filteredCart);
-    }
-    function changeQuantity(e, index) {
-        let newCart = cartItems;
-        cartItems[index].quantity = parseInt(e.target.value);
-        cartSetter([...newCart]);
-    }
 
     return (
         <div>

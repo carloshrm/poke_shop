@@ -4,9 +4,10 @@ import CatalogNav from "./CatalogNav";
 import Pokemon from "./Pokemon";
 
 import { fetchPokemon } from "./APIHelper";
+
 import "./styles/Catalog.css";
 
-function Catalog({ mainCatalog, cartSetter }) {
+function Catalog({ mainCatalog }) {
     const [localCat, setLocalCat] = useState([]);
     const [pageNumber, setPageNumber] = useState(1);
     const [viewDetails, detailsToggle] = useState({ display: false, selectionID: 0 });
@@ -59,11 +60,7 @@ function Catalog({ mainCatalog, cartSetter }) {
 
             <div id="catalog_container" onClick={dismissDetails}>
                 {viewDetails.display ? (
-                    <Pokemon
-                        info={localCat[viewDetails.selectionID]}
-                        toggle={detailsToggle}
-                        cartSetter={cartSetter}
-                    />
+                    <Pokemon info={localCat[viewDetails.selectionID]} toggle={detailsToggle} />
                 ) : (
                     <></>
                 )}

@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "./CartContext";
 import "./styles/Cart.css";
 
-function Cart({ cartItems, cartSetter, balance, totalPrice, visibility }) {
-    function removeFromCart(id) {
-        let filteredCart = cartItems.filter((po) => po.id !== id);
-        cartSetter(filteredCart);
-    }
-    function changeQuantity(e, index) {
-        let newCart = cartItems;
-        cartItems[index].quantity = parseInt(e.target.value);
-        cartSetter([...newCart]);
-    }
+function Cart({ balance, visibility }) {
+    const { cartItems, changeQuantity, removeFromCart, totalPrice } = useContext(CartContext);
 
     return (
         <div id="shopping_cart_div">
