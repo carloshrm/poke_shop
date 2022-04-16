@@ -1,14 +1,11 @@
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 5%;
-  background-color: azure;
-}
-
-a {
-  color: black;
-  text-decoration: none;
+  background-color: red;
 }
 
 .navlinks {
@@ -20,8 +17,13 @@ a {
 }
 
 .navlinks a {
-  border: 1px solid black;
   outline: none;
   padding: 0.5rem 2rem;
-  background-color: beige;
+  color: White;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
 }

@@ -48,15 +48,18 @@ function Catalog({ mainCatalog }) {
 
     return (
         <>
-            <h1>catalog page{pageNumber}</h1>
-            <form onSubmit={searchPokemon}>
-                <input
-                    type="text"
-                    id="catalog_search_bar"
-                    onChange={(e) => setFilterQuery(e.target.value.toLowerCase().trim())}
-                    defaultValue={filterQuery}
-                />
-            </form>
+            <h1>Main Catalog</h1>
+            <h4>
+                Search:
+                <form onSubmit={searchPokemon}>
+                    <input
+                        type="text"
+                        id="catalog_search_bar"
+                        onChange={(e) => setFilterQuery(e.target.value.toLowerCase().trim())}
+                        defaultValue={filterQuery}
+                    />
+                </form>
+            </h4>
 
             <div id="catalog_container" onClick={dismissDetails}>
                 {viewDetails.display ? (

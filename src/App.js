@@ -8,6 +8,7 @@ import Catalog from "./Catalog";
 import Checkout from "./Checkout";
 import Home from "./Home";
 import Navbar from "./Navbar";
+// API
 import { mainCatalogCache } from "./APIHelper";
 // CSS styles
 import "./styles/Home.css";
@@ -32,7 +33,6 @@ function App() {
             <CartProvider>
                 <div className="Home">
                     <Navbar />
-
                     <Cart balance={userBalance} />
                     <Routes>
                         <Route exact path="/" element={<Home />} />

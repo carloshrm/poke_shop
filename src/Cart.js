@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 import CartContext from "./CartContext";
 import "./styles/Cart.css";
 
-function Cart({ balance, visibility }) {
-    const { cartItems, changeQuantity, removeFromCart, totalPrice } = useContext(CartContext);
+function Cart({ balance }) {
+    const {
+        cartItems,
+        changeQuantity,
+        removeFromCart,
+        totalPrice,
+        setCartVisibility,
+        cartVisibility,
+    } = useContext(CartContext);
 
     return (
-        <div id="shopping_cart_div">
+        <div id="shopping_cart_div" onClick={setCartVisibility}>
             <h3>User balance: {balance}</h3>
             <h3>Your Cart: </h3>
             <ul>

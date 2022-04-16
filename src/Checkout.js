@@ -3,8 +3,7 @@ import CartContext from "./CartContext";
 import "./styles/Checkout.css";
 
 function Checkout({ balance }) {
-    const { cartItems, setCart, totalPrice, removeFromCart, changeQuantity } =
-        useContext(CartContext);
+    const { cartItems, totalPrice, removeFromCart, changeQuantity } = useContext(CartContext);
 
     //todo - make changes in styling and disable confirm if total > balance.
 
