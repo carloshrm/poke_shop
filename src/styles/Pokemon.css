@@ -3,7 +3,20 @@
     flex-direction: column;
     position: absolute;
     margin: 0 auto;
-    padding: 2rem;
-    background-color: brown;
+    padding: 2rem 5rem;
+    color: black;
+    background-color: white;
     object-fit: scale-down;
+}
+
+#pokemon_main_stats{
+    background-color: aliceblue;
+    padding: 1rem;
+}
+
+.type_icon
+{
+    object-fit: scale-down;
+    width: 10%;
+    margin-left: 2rem;
 }
