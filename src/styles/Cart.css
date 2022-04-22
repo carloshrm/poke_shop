@@ -1,8 +1,36 @@
+
+.show_cart  {
+    background-color: violet;
+    
+}
+
+.hide_cart {
+    background-color: darkblue;
+    transform: translateX(96%);
+}
+
 #shopping_cart_div {
+    position: sticky;
+    min-width: 10%;
+    top: 2rem;
+    margin-left: auto;
+    width: max-content;
+    height: max-content;
+}
+
+#cart_tab {
+    display: flex;
+    justify-content: space-evenly;
     position: absolute;
-    right: 0;
-    background-color: cornflowerblue;
-    padding: 2rem;
+    left: -1rem;
+    top: 0;
+    width: 1rem;
+    height: 100%;
+    padding: 0 0.2rem;
+    background-color: blue;
+    content: "";
+    writing-mode: vertical-rl;
+    text-orientation: upright;    
 }
 
 ul {

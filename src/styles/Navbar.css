@@ -5,7 +5,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 5%;
-  background-color: red;
+  background-color: darkred;
+  z-index: 1;
 }
 
 .navlinks {

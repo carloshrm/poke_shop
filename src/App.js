@@ -33,7 +33,7 @@ function App() {
             <CartProvider>
                 <div className="Home">
                     <Navbar />
-                    <Cart balance={userBalance} />
+                    <Cart />
                     <Routes>
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="/aboutus" element={<About />} />

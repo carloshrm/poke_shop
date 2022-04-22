@@ -1,4 +1,3 @@
-import { createBrowserHistory } from "history";
 import React, { createContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
@@ -55,6 +54,7 @@ export function CartProvider({ children }) {
                 removeFromCart,
                 changeQuantity,
                 setCartVisibility,
+                cartVisibility,
                 totalPrice,
             }}
         >
