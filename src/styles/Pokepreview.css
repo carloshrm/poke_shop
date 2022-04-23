@@ -1,5 +1,9 @@
 .poke_preview_div {
     display: flex;
     width: fit-content;
-    background-color: azure;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: rgba(210, 210, 255, 0.501);
+    border-radius: 20%;
+    margin: 1rem;
 }

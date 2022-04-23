@@ -5,8 +5,6 @@ import "./styles/Checkout.css";
 function Checkout({ balance }) {
     const { cartItems, totalPrice, removeFromCart, changeQuantity } = useContext(CartContext);
 
-    //todo - make changes in styling and disable confirm if total > balance.
-
     return (
         <div>
             <h2>Checkout</h2>
@@ -41,10 +39,10 @@ function Checkout({ balance }) {
             ))}
             <table>
                 <tr>
-                    <th>Transaction</th>
+                    <th>Purchase Total</th>
                 </tr>
                 <tr>
-                    <td>Purchase Price: </td>
+                    <td>Cost: </td>
                     <td>{totalPrice}</td>
                 </tr>
                 <tr>
@@ -61,7 +59,7 @@ function Checkout({ balance }) {
                     balance - totalPrice > 0
                         ? () => {
                               alert(
-                                  "Oh no! Looks like all our Pokemon have managed to escape somehow...looks like we're gonna have to go and catch'em after all!"
+                                  "Oh no! Looks like all our Pokemon have managed to escape...looks like we're gonna have to go catch'em after all!"
                               );
                           }
                         : () => {

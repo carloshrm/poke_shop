@@ -1,31 +1,30 @@
 
 .show_cart  {
-    background-color: violet;
     
 }
 
 .hide_cart {
-    background-color: darkblue;
-    transform: translateX(96%);
+    display: none;
 }
 
 #shopping_cart_div {
-    position: sticky;
+    background-color: darkblue;
+    position: fixed;
+    color: white;
+    font-weight: bold;
     min-width: 10%;
-    top: 2rem;
-    margin-left: auto;
-    width: max-content;
-    height: max-content;
+    top: 10%;
+    left: 1rem;
 }
 
 #cart_tab {
     display: flex;
     justify-content: space-evenly;
-    position: absolute;
-    left: -1rem;
-    top: 0;
+    position: fixed;
+    top: 10%;
+    left: 0;
     width: 1rem;
-    height: 100%;
+    height: 20%;
     padding: 0 0.2rem;
     background-color: blue;
     content: "";

@@ -48,7 +48,6 @@ function Catalog({ mainCatalog }) {
 
     return (
         <>
-            <h1>Main Catalog</h1>
             <h4>
                 Search:
                 <form onSubmit={searchPokemon}>

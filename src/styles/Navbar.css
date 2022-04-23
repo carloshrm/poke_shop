@@ -1,12 +1,12 @@
-nav {
+#navbar{
+  background-color: darkred;
+  color: white;
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 5%;
-  background-color: darkred;
-  z-index: 1;
 }
 
 .navlinks {

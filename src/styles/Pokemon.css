@@ -6,6 +6,8 @@
     padding: 2rem 5rem;
     color: black;
     background-color: white;
+    border: 3px solid darkblue;
+    border-radius: 10%;
     object-fit: scale-down;
 }
 
@@ -14,9 +16,3 @@
     padding: 1rem;
 }
 
-.type_icon
-{
-    object-fit: scale-down;
-    width: 10%;
-    margin-left: 2rem;
-}

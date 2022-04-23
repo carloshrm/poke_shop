@@ -15,33 +15,37 @@ function Cart() {
     } = useContext(CartContext);
 
     return (
-        <div id="shopping_cart_div" className={cartVisibility ? "show_cart" : "hide_cart"}>
+        <div id="shopping_cart_div">
             <div id="cart_tab" onClick={setCartVisibility}>
                 {cartItems.length == 0 ? <BsCart2 /> : <BsCartFill />}
                 {cartVisibility ? "HIDE" : "SHOW"}
             </div>
-            <h3>Your Cart: </h3>
-            <ul>
-                {cartItems.map((item, i) => (
-                    <li key={item.id}>
-                        <label htmlFor="amount">
-                            {item.info.name[0].toUpperCase() + item.info.name.substring(1) + ": "}
-                        </label>
-                        <input
-                            name="amount"
-                            type="number"
-                            min="1"
-                            max="99"
-                            value={item.quantity}
-                            onChange={(e) => changeQuantity(e, i)}
-                        />
-                        <button onClick={() => removeFromCart(item.id)}>Remove</button>
-                        <p>Subtotal: {item.info.base_experience * item.quantity}</p>
-                    </li>
-                ))}
-            </ul>
-            <p>Total Price: {totalPrice}</p>
-            <Link to="/checkout">Checkout</Link>
+            <div id="cart_contents" className={cartVisibility ? "show_cart" : "hide_cart"}>
+                <h3>Your Cart: </h3>
+                <ul>
+                    {cartItems.map((item, i) => (
+                        <li key={item.id}>
+                            <label htmlFor="amount">
+                                {item.info.name[0].toUpperCase() +
+                                    item.info.name.substring(1) +
+                                    ": "}
+                            </label>
+                            <input
+                                name="amount"
+                                type="number"
+                                min="1"
+                                max="99"
+                                value={item.quantity}
+                                onChange={(e) => changeQuantity(e, i)}
+                            />
+                            <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                            <p>Subtotal: {item.info.base_experience * item.quantity}</p>
+                        </li>
+                    ))}
+                </ul>
+                <p>Total Price: {totalPrice}</p>
+                <Link to="/checkout">Checkout</Link>
+            </div>
         </div>
     );
 }

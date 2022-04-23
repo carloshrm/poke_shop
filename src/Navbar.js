@@ -5,7 +5,7 @@ import "./styles/Navbar.css";
 
 function Navbar() {
     return (
-        <nav className="navbar">
+        <nav id="navbar">
             <h2>PokeShop!</h2>
             <ul className="navlinks">
                 <li>
