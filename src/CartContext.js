@@ -20,6 +20,7 @@ export function CartProvider({ children }) {
         }
         let newCartItem = { id: pokemonInfo.id, info: pokemonInfo, quantity: 1 };
         setCart([...cartItems, newCartItem]);
+        if (!cartVisibility) showCart(() => !cartVisibility);
     }
     function removeFromCart(id) {
         let filteredCart = cartItems.filter((po) => po.id !== id);

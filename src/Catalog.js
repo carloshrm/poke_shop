@@ -13,7 +13,7 @@ function Catalog({ mainCatalog }) {
     const [viewDetails, detailsToggle] = useState({ display: false, selectionID: 0 });
     const [filterQuery, setFilterQuery] = useState("");
 
-    const perPageAmmount = 10;
+    const perPageAmmount = 4;
     let maxPages = Math.round(1 + mainCatalog.length / perPageAmmount);
 
     useEffect(() => {
@@ -28,7 +28,6 @@ function Catalog({ mainCatalog }) {
     async function fetchForLocalCatalog(selection) {
         for (const poke in selection) {
             let apiResults = await fetchPokemon(selection[poke]);
-            if (apiResults.hit) await new Promise((resolve) => setTimeout(resolve, 250));
             setLocalCat((state) => [...state, apiResults.info]);
         }
     }

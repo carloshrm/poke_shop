@@ -17,8 +17,8 @@ function Cart() {
     return (
         <div id="shopping_cart_div">
             <div id="cart_tab" onClick={setCartVisibility}>
-                {cartItems.length == 0 ? <BsCart2 /> : <BsCartFill />}
-                {cartVisibility ? "HIDE" : "SHOW"}
+                {cartItems.length === 0 ? <BsCart2 /> : <BsCartFill />}
+                {cartVisibility ? "Hide Cart" : "Show Cart"}
             </div>
             <div id="cart_contents" className={cartVisibility ? "show_cart" : "hide_cart"}>
                 <h3>Your Cart: </h3>

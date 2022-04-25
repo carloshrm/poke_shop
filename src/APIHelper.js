@@ -1,7 +1,6 @@
 async function callApi() {
-    const apiFetch = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151");
+    const apiFetch = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0");
     const apiResponse = await apiFetch.json();
-    console.warn("= Api Call =");
     return apiResponse;
 }
 
@@ -36,11 +35,11 @@ function pokeDetailsCache(data) {
 async function fetchPokemon(pokemon) {
     let details = JSON.parse(localStorage.getItem("pokeDetails"));
     if (details[pokemon.name].unset) {
-        console.warn("= Api Call =");
         const pokeBall = await fetch(pokemon.url);
         const caughtPokemon = await pokeBall.json();
         details[pokemon.name] = { ...selectPokemonData(caughtPokemon), unset: false };
         localStorage.setItem("pokeDetails", JSON.stringify(details));
+        await new Promise((resolve) => setTimeout(resolve, 500));
         return { info: details[pokemon.name] };
     } else {
         return { info: details[pokemon.name] };

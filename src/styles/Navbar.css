@@ -7,6 +7,7 @@
   justify-content: space-around;
   align-items: center;
   min-height: 5%;
+  border-bottom: 4px solid blue;
 }
 
 .navlinks {
@@ -19,12 +20,9 @@
 
 .navlinks a {
   outline: none;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.5rem;
   color: White;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-a {
-  text-decoration: none;
-}

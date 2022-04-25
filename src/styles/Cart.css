@@ -8,28 +8,31 @@
 }
 
 #shopping_cart_div {
+    display: flex;
     background-color: darkblue;
     position: fixed;
     color: white;
     font-weight: bold;
-    min-width: 10%;
-    top: 10%;
-    left: 1rem;
+    top: 5rem;
+}
+
+#shopping_cart_div a{
+    color: yellow;
 }
 
 #cart_tab {
     display: flex;
     justify-content: space-evenly;
-    position: fixed;
-    top: 10%;
-    left: 0;
-    width: 1rem;
-    height: 20%;
-    padding: 0 0.2rem;
+    padding: 1rem 0.5rem;
     background-color: blue;
     content: "";
     writing-mode: vertical-rl;
-    text-orientation: upright;    
+}
+#cart_tab svg {
+    margin-bottom: 1rem;
+}
+#cart_contents{
+    padding:1rem;
 }
 
 ul {

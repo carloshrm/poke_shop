@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import CartContext from "./CartContext";
 import "./styles/Checkout.css";
 
@@ -6,7 +6,7 @@ function Checkout({ balance }) {
     const { cartItems, totalPrice, removeFromCart, changeQuantity } = useContext(CartContext);
 
     return (
-        <div>
+        <div id="main_checkout_div">
             <h2>Checkout</h2>
             {cartItems.map((item, i) => (
                 <div class="checkout_item_div" key={item.id}>
@@ -37,9 +37,9 @@ function Checkout({ balance }) {
                     </table>
                 </div>
             ))}
-            <table>
+            <table id="checkout_calc">
                 <tr>
-                    <th>Purchase Total</th>
+                    <th>Your purchase: </th>
                 </tr>
                 <tr>
                     <td>Cost: </td>
@@ -51,7 +51,9 @@ function Checkout({ balance }) {
                 </tr>
                 <tr>
                     <td>Total: </td>
-                    <td>{balance - totalPrice}</td>
+                    <td id={balance - totalPrice >= 0 ? "total_ok" : "total_over"}>
+                        {balance - totalPrice}
+                    </td>
                 </tr>
             </table>
             <button
@@ -63,7 +65,7 @@ function Checkout({ balance }) {
                               );
                           }
                         : () => {
-                              alert("Not enough balance available.");
+                              alert("You don't have enough funds.");
                           }
                 }
             >

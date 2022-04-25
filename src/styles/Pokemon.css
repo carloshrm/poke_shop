@@ -2,17 +2,47 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    margin: 0 auto;
+    top: 10%;
+    height: fit-content;
+    width: fit-content;
     padding: 2rem 5rem;
     color: black;
     background-color: white;
     border: 3px solid darkblue;
-    border-radius: 10%;
-    object-fit: scale-down;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
-#pokemon_main_stats{
+#type_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 10%;
+}
+
+#pokemon_detailed_stats{
+    text-align: start;
     background-color: aliceblue;
-    padding: 1rem;
+    margin-bottom: 1rem;
+}
+#pokemon_detailed_stats td {
+    padding: 0.2rem 2rem;
+    border-bottom: 1px dotted gray;
+}
+#pokemon_detailed_stats td::first-letter{
+    text-transform: uppercase;
 }
 
+#pokemon_details_container button {
+    margin: 0 1rem;
+}
+
+#pokemon_base_stats{
+    background-color: aliceblue;
+    margin-bottom: 1rem;
+}
+#pokemon_base_stats td {
+    border: 1px solid black;
+    padding: 0.2rem 1rem;
+}

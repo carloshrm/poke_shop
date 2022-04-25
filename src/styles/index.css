@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
   box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  text-decoration: none;
 }

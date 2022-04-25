@@ -3,8 +3,8 @@ import "./styles/Pokepreview.css";
 
 function Pokepreview({ info }) {
     return (
-        <div className="poke_preview">
-            <h1>{info.name[0].toUpperCase() + info.name.substring(1)}</h1>
+        <div>
+            <h2>{"#" + info.id + " " + info.name[0].toUpperCase() + info.name.substring(1)}</h2>
             <img src={info.sprites.front_default} alt="" />
         </div>
     );
