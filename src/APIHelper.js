@@ -1,5 +1,5 @@
 async function callApi() {
-    const apiFetch = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0");
+    const apiFetch = await fetch("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151");
     const apiResponse = await apiFetch.json();
     return apiResponse;
 }
@@ -39,7 +39,7 @@ async function fetchPokemon(pokemon) {
         const caughtPokemon = await pokeBall.json();
         details[pokemon.name] = { ...selectPokemonData(caughtPokemon), unset: false };
         localStorage.setItem("pokeDetails", JSON.stringify(details));
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        await new Promise((resolve) => setTimeout(resolve, 400));
         return { info: details[pokemon.name] };
     } else {
         return { info: details[pokemon.name] };

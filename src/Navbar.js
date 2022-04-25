@@ -12,7 +12,7 @@ function Navbar() {
             <ul className="navlinks">
                 <li>
                     <MdHome />
-                    <Link to="/">Home</Link>
+                    <Link to="/poke_shop">Home</Link>
                 </li>
                 <li>
                     <MdInfoOutline />
