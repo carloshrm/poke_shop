@@ -1,5 +1,7 @@
 # Pokemon Shopping
 
+https://carloshrm.github.io/poke_shop/
+
 Why catch when you can just buy 'em all!
 
 Info fetched from https://pokeapi.co
