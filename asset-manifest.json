@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/carloshrm/poke_shop/static/css/main.5c500d15.css",
+    "main.js": "/carloshrm/poke_shop/static/js/main.9f55aa65.js",
+    "static/media/Pokémon_Grass_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Grass_Type_Icon.46e1c146194c26df0f5d1c5081691d70.svg",
+    "static/media/Pokémon_Fighting_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Fighting_Type_Icon.b3131885f46dc50d25da4b8933fadc7d.svg",
+    "static/media/Pokémon_Dragon_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Dragon_Type_Icon.1015b9351daddd6dddbb9981afc17e62.svg",
+    "static/media/Pokémon_Bug_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Bug_Type_Icon.aa19ded3c546984c249abbc11ec74923.svg",
+    "static/media/Pokémon_Fire_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Fire_Type_Icon.a46c8ab47d8e4e4b97f00dffd3dbc374.svg",
+    "static/media/Pokémon_Psychic_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Psychic_Type_Icon.74f5c2721fa4ce176c5f3f813476e863.svg",
+    "static/media/Pokémon_Flying_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Flying_Type_Icon.be180fff0377b19d2f1e1aa60a799230.svg",
+    "static/media/Pokémon_Poison_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Poison_Type_Icon.9896128fa72e672bc360e84be4f4211b.svg",
+    "static/media/Pokémon_Ghost_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Ghost_Type_Icon.359e7764541c0fd0ea294fc4881bd404.svg",
+    "static/media/Pokémon_Water_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Water_Type_Icon.c53a4e540a240b2e007c12577c5cc252.svg",
+    "static/media/Pokémon_Ice_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Ice_Type_Icon.aa90e1f3281f496b89413977633cfe31.svg",
+    "static/media/Pokémon_Fairy_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Fairy_Type_Icon.8b5e326b0f13483e232fb72bea23e2db.svg",
+    "static/media/Pokémon_Rock_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Rock_Type_Icon.6f78539c509f3e8ef38e516d4258d07b.svg",
+    "static/media/Pokémon_Steel_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Steel_Type_Icon.3e0cae3aa2dfa8d6e890fb9703aa5192.svg",
+    "static/media/Pokémon_Ground_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Ground_Type_Icon.2ef72b9394852ba564b73fefcdde824c.svg",
+    "static/media/Pokémon_Dark_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Dark_Type_Icon.805402c6622db3d84be5dccc55093698.svg",
+    "static/media/Pokémon_Normal_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Normal_Type_Icon.f718d9c403160e49d9e014b1bb997962.svg",
+    "static/media/Pokémon_Electric_Type_Icon.svg": "/carloshrm/poke_shop/static/media/Pokémon_Electric_Type_Icon.2fbb1c92defa3b834741726788f7ea14.svg",
+    "index.html": "/carloshrm/poke_shop/index.html",
+    "main.5c500d15.css.map": "/carloshrm/poke_shop/static/css/main.5c500d15.css.map",
+    "main.9f55aa65.js.map": "/carloshrm/poke_shop/static/js/main.9f55aa65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c500d15.css",
+    "static/js/main.9f55aa65.js"
+  ]
+}
