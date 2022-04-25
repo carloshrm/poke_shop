@@ -57,17 +57,19 @@ function Checkout({ balance }) {
                 </tr>
             </table>
             <button
-                onClick={
-                    balance - totalPrice > 0
-                        ? () => {
-                              alert(
-                                  "Oh no! Looks like all our Pokemon have managed to escape...looks like we're gonna have to go catch'em after all!"
-                              );
-                          }
-                        : () => {
-                              alert("You don't have enough funds.");
-                          }
-                }
+                onClick={() => {
+                    if (totalPrice > 0) {
+                        if (balance - totalPrice > 0) {
+                            alert(
+                                "Oh no! Looks like all our Pokemon have managed to escape...looks like we're gonna have to go catch'em after all!"
+                            );
+                        } else {
+                            alert("You don't have enough funds.");
+                        }
+                    } else {
+                        alert("Your cart is empty.");
+                    }
+                }}
             >
                 Confirm
             </button>

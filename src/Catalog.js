@@ -66,7 +66,7 @@ function Catalog({ mainCatalog }) {
                     <></>
                 )}
                 {localCat.map((entry, i) => {
-                    if (entry.name.includes(filterQuery) || filterQuery === "")
+                    if (entry.name.includes(filterQuery) || filterQuery === "") {
                         return (
                             <div
                                 className="poke_preview_div"
@@ -82,6 +82,9 @@ function Catalog({ mainCatalog }) {
                                 <Pokepreview info={entry} />
                             </div>
                         );
+                    } else {
+                        return <></>;
+                    }
                 })}
             </div>
             <CatalogNav page={pageNumber} max={maxPages} flip={setPageNumber} />

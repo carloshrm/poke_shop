@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import CartContext from "./CartContext";
 import icons from "./PokeIcons";
 
