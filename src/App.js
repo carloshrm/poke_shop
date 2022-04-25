@@ -1,5 +1,5 @@
 // React
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // Local Modules
 import About from "./About";
@@ -18,8 +18,6 @@ import { CartProvider } from "./CartContext";
 function App() {
     const [catalogData, setCatalogData] = useState([]);
     const [userBalance, setBalance] = useState(800);
-    // todo - start CSS styling
-    // todo - fix html errors in checkout
 
     useEffect(() => {
         (async () => {
@@ -35,7 +33,7 @@ function App() {
                     <Navbar />
                     <Cart />
                     <Routes>
-                        <Route exact path="/" element={<Home />} />
+                        <Route exact path="/poke_shop" element={<Home />} />
                         <Route exact path="/aboutus" element={<About />} />
                         <Route
                             exact
