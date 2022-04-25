@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/poke_shop/static/css/main.5c500d15.css",
-    "main.js": "/poke_shop/static/js/main.62b3d62e.js",
+    "main.js": "/poke_shop/static/js/main.84b52fd1.js",
     "static/media/Pokémon_Grass_Type_Icon.svg": "/poke_shop/static/media/Pokémon_Grass_Type_Icon.46e1c146194c26df0f5d1c5081691d70.svg",
     "static/media/Pokémon_Fighting_Type_Icon.svg": "/poke_shop/static/media/Pokémon_Fighting_Type_Icon.b3131885f46dc50d25da4b8933fadc7d.svg",
     "static/media/Pokémon_Dragon_Type_Icon.svg": "/poke_shop/static/media/Pokémon_Dragon_Type_Icon.1015b9351daddd6dddbb9981afc17e62.svg",
@@ -22,10 +22,10 @@
     "static/media/Pokémon_Electric_Type_Icon.svg": "/poke_shop/static/media/Pokémon_Electric_Type_Icon.2fbb1c92defa3b834741726788f7ea14.svg",
     "index.html": "/poke_shop/index.html",
     "main.5c500d15.css.map": "/poke_shop/static/css/main.5c500d15.css.map",
-    "main.62b3d62e.js.map": "/poke_shop/static/js/main.62b3d62e.js.map"
+    "main.84b52fd1.js.map": "/poke_shop/static/js/main.84b52fd1.js.map"
   },
   "entrypoints": [
     "static/css/main.5c500d15.css",
-    "static/js/main.62b3d62e.js"
+    "static/js/main.84b52fd1.js"
   ]
 }
