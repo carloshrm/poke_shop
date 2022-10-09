@@ -1,13 +1,21 @@
-#navbar{
-  background-color: darkred;
+#navbar {
+  background-color: rgb(54, 0, 0);
   color: white;
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 5%;
-  border-bottom: 4px solid blue;
+  max-height: 4em;
+}
+
+#nav_title {
+  color: rgb(255, 238, 0);
+  font-weight: bold;
+}
+
+.current_nav {
+  border-color: yellow;
 }
 
 .navlinks {
@@ -18,11 +26,14 @@
   list-style: none;
 }
 
-.navlinks a {
-  outline: none;
-  padding: 0.5rem 0.5rem;
-  color: White;
-  font-weight: bold;
-  font-size: 1.2rem;
+li {
+  border: 1px solid white;
+  padding: 0.2em 4em;
 }
 
+.navlinks a {
+  margin: 0 0.2em;
+  outline: none;
+  color: White;
+  font-size: 1.2rem;
+}

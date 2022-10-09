@@ -15,7 +15,7 @@ function Cart() {
     } = useContext(CartContext);
 
     return (
-        <div id="shopping_cart_div">
+        <aside id="shopping_cart_div">
             <div id="cart_tab" onClick={setCartVisibility}>
                 {cartItems.length === 0 ? <BsCart2 /> : <BsCartFill />}
                 {cartVisibility ? "Hide Cart" : "Show Cart"}
@@ -24,7 +24,7 @@ function Cart() {
                 <h3>Your Cart: </h3>
                 <ul>
                     {cartItems.map((item, i) => (
-                        <li key={item.id}>
+                        <li className="cart_item" key={item.id}>
                             <label htmlFor="amount">
                                 {item.info.name[0].toUpperCase() +
                                     item.info.name.substring(1) +
@@ -39,14 +39,14 @@ function Cart() {
                                 onChange={(e) => changeQuantity(e, i)}
                             />
                             <button onClick={() => removeFromCart(item.id)}>Remove</button>
-                            <p>Subtotal: {item.info.base_experience * item.quantity}</p>
+                            <p>Subtotal: ${(item.info.base_experience * item.quantity).toFixed(2)}</p>
                         </li>
                     ))}
                 </ul>
-                <p>Total Price: {totalPrice}</p>
+                <p>Total: ${totalPrice.toFixed(2)}</p>
                 <Link to="/checkout">Checkout</Link>
             </div>
-        </div>
+        </aside>
     );
 }
 export default Cart;

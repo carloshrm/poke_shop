@@ -2,23 +2,22 @@
     text-align: center;
 }
 
-.logo_style
-{
+.logo_style {
     font-weight: bold;
     font-size: 5em;
     -webkit-text-fill-color: rgb(255, 217, 0);
     -webkit-text-stroke-color: darkblue;
-    -webkit-text-stroke-width: 0.3rem;
+    -webkit-text-stroke-width: 1px;
     paint-order: stroke fill;
 }
 
- button {
-    background-color: yellow;
-    padding: 0.4rem 1.5rem;
-    border: 2px solid darkblue;
+button {
+    background-color: rgb(255, 255, 255);
+    padding: 0.2rem 1rem;
     border-radius: 1rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lowercase;
+    border: 1px solid black;
 }
 
 .Home h2 {

@@ -2,13 +2,26 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0.5rem 0;
     width: 100%;
-    background-color: darkred;
+    background-color: rgb(54, 0, 0);
     color: white;
     position: fixed;
     bottom: 0;
     z-index: -1;
+}
+
+.catNavButtons p,
+.catNavButtons h3 {
+    padding: 0 1em;
+}
+
+.active_cat_nav {
+    border: 1px solid yellow;
+}
+
+#catalog_title {
+    font-size: 2em;
+    margin: 0 auto 0 1rem;
 }
 
 #catalog_container {
@@ -17,5 +30,15 @@
     align-items: center;
     max-width: 100%;
     justify-content: space-around;
+}
+
+
+#catalog_search {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(210, 210, 255, 0.501);
     border: 1px solid black;
 }

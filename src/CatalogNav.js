@@ -13,7 +13,7 @@ function CatalogNav({ page, max, flip }) {
             <button onClick={() => flipPageContents(false)}>back</button>
             {new Array(max).fill().map((each, i) =>
                 i + 1 === page ? (
-                    <h3 key={i}>{i + 1}</h3>
+                    <h3 className="active_cat_nav" key={i}>{i + 1}</h3>
                 ) : (
                     <p key={i} onClick={() => flip(i + 1)}>
                         {i + 1}
